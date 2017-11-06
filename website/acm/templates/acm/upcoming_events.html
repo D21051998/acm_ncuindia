@@ -1,0 +1,16 @@
+{% extends 'acm/base.html' %}
+{% block body_block %}
+
+Upcoming events:
+
+{% for event in events %}
+<div style="border: 1px solid black; border-radius:1px;">
+
+
+    <h4>{{ event.title }}</h4>
+    <h5>{{ event.content|safe }}</h5>
+    </div>
+<br>
+{% endfor %}
+
+{% endblock %}
