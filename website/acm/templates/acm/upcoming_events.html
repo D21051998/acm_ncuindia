@@ -1,14 +1,47 @@
 {% extends 'acm/base.html' %}
-{% block body_block %}
+{% load staticfiles %}
 
-Upcoming events:
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">ACM STUDENT CHAPTER, NCU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item  px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:index' %}">Home</a>
+            </li>
+            <li class="nav-item  px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:team' %}">Our Team</a>
+            </li>
+            <li class="nav-item active px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:upcoming' %}">Upcoming Events</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:feedback' %}">Feedback</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+{% endblock %}
+{% block body_block %}
+<br>
+<h2>Upcoming events:</h2>
 
 {% for event in events %}
-<div style="border: 1px solid black; border-radius:1px;">
+<div class="card" style="background-color:rgba(0, 0,0,0.1);border: 3px solid #cccccc; padding:10px; width: 100%">
 
-
-    <h4>{{ event.title }}</h4>
-    <h5>{{ event.content|safe }}</h5>
+    <div class="card-block">
+        <h4 class="card-title">
+            {{ event.title }}
+        </h4>
+        <p class="card-text" >
+            {{ event.content|safe }}
+        </p>
+    </div>
     </div>
 <br>
 {% endfor %}

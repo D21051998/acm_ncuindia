@@ -1,0 +1,116 @@
+{% extends 'acm/base.html' %}
+{% load staticfiles %}
+
+{% block navbar %}
+<style>
+    img {
+        width: 90%;
+    }
+
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">ACM STUDENT CHAPTER,
+            NCU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item  px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:index' %}">Home</a>
+                </li>
+                <li class="nav-item active px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:team' %}">Our Team</a>
+                </li>
+                <li class="nav-item  px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:upcoming' %}">Upcoming Events</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:feedback' %}">Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+{% block body_block %}
+<br>
+<h2>Our Team</h2>
+
+<div class="row" style="width: 100%">
+    <div class="col-md-3" style="width: 90%;float:left; margin: 1%; ">
+        <div class="card" style="width: 17rem;">
+            <img class="card-img-top" src="{% static 'images/fake.svg' %}" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3" style="width: 90%;float:left; margin: 1%; ">
+        <div class="card" style="width: 17rem;">
+            <img class="card-img-top" src="{% static 'images/fake.svg' %}" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3" style="width: 90%;float:left; margin: 1%;">
+        <div class="card" style="width: 17rem">
+            <img class="card-img-top" src="{% static 'images/fake.svg' %}" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="width: 100%">
+    <div class="col-md-3" style="width: 90%;float:left; margin: 1%; ">
+        <div class="card" style="width: 17rem;">
+            <img class="card-img-top" src="{% static 'images/fake.svg' %}" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3" style="width: 90%;float:left; margin: 1%; ">
+        <div class="card" style="width: 17rem;">
+            <img class="card-img-top" src="{% static 'images/fake.svg' %}" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3" style="width: 90%;float:left; margin: 1%;">
+        <div class="card" style="width: 17rem">
+            <img class="card-img-top" src="{% static 'images/fake.svg' %}" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

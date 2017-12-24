@@ -1,4 +1,78 @@
 {% extends 'acm/base.html' %}
+{% load staticfiles %}
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">ACM STUDENT CHAPTER, NCU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active  px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:index' %}">Home</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:team' %}">Our Team</a>
+            </li>
+            <li class="nav-item  px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:upcoming' %}">Upcoming Events</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="{% url 'acm:feedback' %}">Feedback</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+{% endblock %}
 {% block body_block %}
-Index
+
+<br>
+<div>
+    <div class="col-sm-10">
+        <h3><b>ACM STUDENT CHAPTER, THE NORTHCAP UNIVERSITY, GURGAON</b></h3>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <a href="https://www.acm.org" target="_blank"><img class="text-center" src="{% static 'images/acm.gif' %}"  style="width: 100%;vertical-align: middle;" ></a>
+    </div>
+    <div class="col-md-5">
+        <a href="http://www.ncuindia.edu" target="_blank"><img class="text-center" src="{% static 'images/ncu.png' %}" href="http://ncuindia.edu" style="width: 100%;vertical-align: middle;height: 75%" ></a>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+
+
+
+<div>
+    <div class="col-sm-10">
+        <p>Our university - <b>The NorthCap University</b> is a multi-disciplinary University, offering various Undergraduate and Postgraduate courses in Engineering, Law and Management. As per National Institutional Ranking Framework (NIRF), introduced by HRD Ministry, the University has been ranked 82nd among all the universities in India. Also it is the only private university in Delhi NCR to secure a rank in top 100 universities, across the country.</p>
+    </div>
+</div>
+<div>
+    <div class="col-sm-10">
+        <b>What is ACM?</b> - <a target="_blank" href="https://www.acm.org">www.acm.org</a> ACM brings together computing educators, researchers, and professionals to inspire dialogue, share resources, and address the field's challenges. ACM strengthens the profession's collective voice through strong leadership, promotion of the highest standards, and recognition of technical excellence. ACM provides opportunities for lifelong learning, career development, and professional networking.
+
+    </div>
+</div>
+<div>
+    <div class="col-sm-10">
+<b>What is our aim?</b> - Through this student chapter, we hope to encourage students to diligently pursue their interest in computer technologies and contribute towards the revolution our world is moving towards. With the help of our faculties, along with support from ACM, we hope to create lucrative and proficient computer engineers.
+
+    </div>
+</div>
+
+<div>
+    <div class="col-sm-10">
+        <b>Our team</b> - Our chairperson, Meghna Sharma and our co-chair,Jatin Bhati, along with our faculty support Latika Dhulia, have formed a capable and creative team of developers, artists, PR practitioners and organizers. Our web development team is lead by Deepanshu Jain and has done a great work with our website. Our group of content writers work under Chhavi Jain and show their magic with our reports and articles. Garima handles our social media with a team of socially very active people. The event organizers and the graphic designers work with Jatin to manage the very successful events we conduct regularly. We are very proud of our team for building our student chapter to what it is today.
+
+    </div>
+</div>
+
+
 {% endblock %}

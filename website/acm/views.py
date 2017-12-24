@@ -6,6 +6,8 @@ from .models import UpcomingEvents
 def index_view(request):
     return render(request, 'acm/index.html', {})
 
+def our_team_view(request):
+    return render(request, 'acm/our_team.html', {})
 
 def feedback(request):
     if request.method == "POST":
